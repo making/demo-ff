@@ -7,9 +7,10 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "feature2")
 @RefreshScope
-public class Feature2 {
+public class Feature2 implements Feature {
 	private boolean enabled = false;
 
+	@Override
 	public boolean isEnabled() {
 		return enabled;
 	}

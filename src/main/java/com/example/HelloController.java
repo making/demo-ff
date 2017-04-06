@@ -23,12 +23,8 @@ public class HelloController {
 	Map<String, Object> hello() {
 		Map<String, Object> response = new HashMap<>();
 		response.put("message", "Hello");
-		if (feature1.isEnabled()) {
-			response.put("feature1", feature1.feature());
-		}
-		if (feature2.isEnabled()) {
-			response.put("feature2", feature2.feature());
-		}
+		feature1.ifEnabled(() -> response.put("feature1", feature1.feature()));
+		feature2.ifEnabled(() -> response.put("feature2", feature2.feature()));
 		return response;
 	}
 }
