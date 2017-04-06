@@ -22,5 +22,4 @@ public class Feature1 implements Feature {
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}
-
 }

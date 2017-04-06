@@ -10,6 +10,10 @@ import org.springframework.stereotype.Component;
 public class Feature2 implements Feature {
 	private boolean enabled = false;
 
+	public String feature() {
+		return "This is feature2!";
+	}
+
 	@Override
 	public boolean isEnabled() {
 		return enabled;
@@ -17,9 +21,5 @@ public class Feature2 implements Feature {
 
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
-	}
-
-	public String feature() {
-		return "This is feature2!";
 	}
 }
