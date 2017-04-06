@@ -1,4 +1,4 @@
-# Feature Flag demo with Config Server / Spring Cloud Services
+# Feature Toggle demo with Config Server / Spring Cloud Services
 
 ## Create Config Service
 
@@ -57,7 +57,7 @@ $ curl http://demo-ff.apps.example.com/
 {"feature1":"This is feature1!","message":"Hello"}
 ```
 
-### Enable Feature2 (Adhoc)
+## Enable Feature2 (Adhoc)
 
 ```
 $ curl -u demo:password http://demo-ff.apps.example.com/env -d feature2.enabled=true
